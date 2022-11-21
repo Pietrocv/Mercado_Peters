@@ -1,0 +1,64 @@
+body {
+    background-color: rgb(51, 51, 51);
+}
+
+.caixa {
+    background-color: rgb(255, 255, 255);
+    padding: 1%;
+    margin-top: 10%;
+    margin-left: 35%;
+    margin-right: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15%;
+    box-shadow: 4px 4px 2px 0px #00000060;
+    margin-bottom: 20%;
+}
+
+.input-all {
+    text-align: left;
+    display: grid;
+    margin-bottom: 2%;
+    color: rgb(0, 0, 0);
+    text-decoration: solid;
+
+}
+
+.input-focus {
+    border-color: aqua;
+}
+
+.espaco {
+    margin-top: 2%;
+}
+
+.input-decoration {
+    border-color: rgb(255, 18, 18);
+    border-radius: 5%;
+    border-width: 5%;
+    background-color: transparent;
+}
+
+.btnlog {
+    margin-top: 2%;
+    margin-bottom: 3%;
+    width: 35%;
+}
+
+h1 {
+    color: rgb(0, 0, 0);
+}
+
+.mastfoot {
+    display: flex;
+    color: rgba(255, 255, 255, .5);
+    justify-content: center;
+}
+@media (max-width: 600px) {
+    .caixa{
+        width: 100%;
+        margin: 0 5%;
+    }
+
+}
