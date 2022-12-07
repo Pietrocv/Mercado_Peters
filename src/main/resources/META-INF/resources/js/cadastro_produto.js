@@ -1,14 +1,25 @@
 function voltar(){
     window.location.href = "/menu"
+
 }
 function cadastro_produto(){
-    alert("Produto cadastrado!")
+
+     if(Object.values(getDTO()).filter(value => value === "").length > 0)return Toastify({
+         text: "Preencha todos os campos!",
+         duration: 3000,
+         style: {background: "red"}
+     }).showToast();
 
     fetch(getRequest("/cadastro_produto/save", getDTO()))
         .then(response => response.json())
         .then(function(dto) {
             console.log(dto)
-            alert(JSON.stringify(dto));
+            return Toastify({
+                text: "Produto Cadastrado!",
+                duration: 3000,
+                style: {background: "green"}
+            }).showToast();
+            // alert(JSON.stringify(dto));
         })
         .catch(function(error) {
             console.error(error);
@@ -33,3 +44,4 @@ function getDTO(){
         "preco_produto": document.querySelector("#preco_produto").value
     }
 }
+
